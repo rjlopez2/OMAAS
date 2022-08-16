@@ -12,7 +12,11 @@ dependencies:
   - nodejs
   - scikit-learn
   - jupyter_contrib_nbextensions
+  - nb_conda_kernels
   - pip:
       - cookiecutter
       - magicgui
       - napari[all]
+      - sif_parser
+      - twine
+      - pytest
