@@ -20,3 +20,4 @@ dependencies:
       - sif_parser
       - twine
       - pytest
+      - microfilm[all]
