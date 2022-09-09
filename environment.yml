@@ -21,3 +21,5 @@ dependencies:
       - twine
       - pytest
       - microfilm[all]
+  - anaconda:
+      - git
