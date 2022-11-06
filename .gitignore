@@ -219,6 +219,45 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+####### R related and varia #######
+
+.Rprofile
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.Rdata
+.httr-oauth
+*.html
+*.pdf
+apa7.csl
+.ssh/
+.local/
+.pki/
+.cache/
+*.svg
+*.png
+*.sif
+*.rds
+*.tex
+*.tar.gz
+temp.bib
+*.log
+*.zip
+data/data.csv
+*.aux
+*.out
+.bash_history
+.wget-hsts
+.config/
+.gitconfig
+renv/
+
+
+
+
+
+
 
 
 ####### Project specific #######
