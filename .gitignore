@@ -222,4 +222,7 @@ $RECYCLE.BIN/
 
 
 ####### Project specific #######
- test_data/
+
+
+test_data/
+sandbox/
