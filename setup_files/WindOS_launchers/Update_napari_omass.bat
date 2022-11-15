@@ -4,5 +4,10 @@
 # 2. remove the librari napari-omaas
 # 3, install it again locally using conda install . -e
 
+call conda activate base
+call conda env remove -n omass_env_test_user_implementation -y
+call conda env create -f ..\environments\environment_for_tests.yml
+# pause
+
 
 
