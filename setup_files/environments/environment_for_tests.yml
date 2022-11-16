@@ -16,6 +16,6 @@ dependencies:
     - napari[all]
     - git+https://github.com/rjlopez2/napari-mat-file-reader.git # install napari-mat-file-reader
     - git+https://github.com/rjlopez2/napari-sif-reader.git # install napari-sif-reader
-    - git+https://github.com/rjlopez2/napari-time_series_plotter.git@add_ROI_and_points_plotting # install time series plotter
+    - git+https://github.com/rjlopez2/napari-time_series_plotter.git # # install time series plotter
     - git+https://github.com/rjlopez2/napari-omaas.git@rapid_user_implementation # napari-omaas
     # - git+https://github.com/jayunruh/napari_jroitools # tools for reading writing rois
