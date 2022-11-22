@@ -15,24 +15,25 @@ More documentation will come for each specifics analysis routine.
 
 3. using Github-desktop **clone the [omaas-repo]** and place it into a folder where you will do your analysis example <br>
 
-    working_folder/softwares/OMAAS...
+        working_folder/softwares/OMAAS...
 
 
 4. **install minicoda** from here [download-miniconda].
 
-5. open miniconda prompt and type: <br>
+5. open miniconda prompt and type:
 
-    conda init
+        conda init
+
 
 6. restart the prompt
 
 7. uning the miniconda prompt navigate to the folder <br>
 
-    ```.../OMAAS/setup_files/environments/```
+        .../OMAAS/setup_files/environments/
 
     and write the following command: <br>
 
-    ```conda env create -f environment_OMAAS_base.yml```
+        conda env create -f environment_OMAAS_base.yml
 
 8. if everything went well miniconda should have installed your environment called ```omaas_env_base``` with napari and all the additional plugins/dependencies.
 
@@ -47,3 +48,5 @@ More documentation will come for each specifics analysis routine.
 
 
 ## Creating a working enviroenmet (Mac users)
+
+...working on it
