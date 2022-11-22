@@ -22,7 +22,7 @@ More documentation will come for each specifics analysis routine.
 
 5. open miniconda prompt and type: <br>
 
-    ```conda init```
+    conda init
 
 6. restart the prompt
 
