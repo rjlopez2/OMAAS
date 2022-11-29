@@ -19,3 +19,4 @@ dependencies:
     - git+https://github.com/rjlopez2/napari-time_series_plotter.git@custom_use # # install time series plotter from my forked repo
     - git+https://github.com/rjlopez2/napari-omaas.git@rapid_user_implementation # napari-omaas
     # - git+https://github.com/jayunruh/napari_jroitools # tools for reading writing rois
+    - microfilm
