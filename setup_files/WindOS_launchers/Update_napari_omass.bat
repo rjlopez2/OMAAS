@@ -6,5 +6,5 @@
 
 call conda activate base
 call conda env remove -n omass_env_base -y
-call conda env create -f ..\environments\environment_for_tests.yml
+call conda env create -f ..\environments\environment_OMAAS_base.yml
 # pause
