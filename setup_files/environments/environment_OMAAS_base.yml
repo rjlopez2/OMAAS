@@ -1,10 +1,10 @@
-# name: napari-pp-test
-name: omass_env_base
+name: napari-pp-test
+# name: omass_env_base
 channels:
   - conda-forge
 dependencies:
   - python=3.9
-  # - numpy
+  - numpy
   - pip
   - scikit-image
   - scikit-learn
@@ -14,9 +14,6 @@ dependencies:
   - nb_conda_kernels
   - pip:
     - napari[all]
-    # - git+https://github.com/rjlopez2/napari-mat-file-reader.git # install napari-mat-file-reader
-    # - git+https://github.com/rjlopez2/napari-sif-reader.git # install napari-sif-reader
-    - git+https://github.com/rjlopez2/napari-time_series_plotter.git@custom_use # # install time series plotter from my forked repo
     - git+https://github.com/rjlopez2/napari-omaas.git # napari-omaas
-    # - git+https://github.com/jayunruh/napari_jroitools # tools for reading writing rois
+
     - microfilm
