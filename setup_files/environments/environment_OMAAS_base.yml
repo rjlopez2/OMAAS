@@ -18,5 +18,6 @@ dependencies:
     - git+https://github.com/rjlopez2/napari-time_series_plotter.git@custom_use # # install time series plotter from my forked repo
     - git+https://github.com/rjlopez2/napari-mat-file-reader.git
     - git+https://github.com/rjlopez2/napari-sif-reader.git
+    - pyqtgraph
 
     # - microfilm
