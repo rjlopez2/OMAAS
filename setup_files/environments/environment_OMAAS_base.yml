@@ -12,6 +12,7 @@ dependencies:
   - nodejs
   - jupyter_contrib_nbextensions
   - nb_conda_kernels
+  - ipykernel
   - pip:
     - napari[all]
     - git+https://github.com/rjlopez2/napari-omaas.git # napari-omaas
