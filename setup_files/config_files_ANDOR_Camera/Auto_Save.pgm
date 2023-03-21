@@ -1,0 +1,50 @@
+:rem This program will acquire a signal with current settings, save the file to the current directory 
+:rem in a folder with the current date, using the current time as the file name,
+:rem and then close the data set.
+
+:rem start = 1
+
+:rem while start == 1
+
+:rem Acquire Signal 
+SetTriggerMode(0) :rem 0 = internal; 1 = external; 6 = external start; 7 = external exposure
+run()
+
+:rem Create Folder
+
+current_date$ = date$()
+current_year$ = right$(current_date$,4)
+current_month$ = mid$(current_date$,4,2)
+current_day$ = left$(current_date$,2)
+day_stamp$ = current_year$;current_month$;;current_day$
+
+exp_folder_name$ = "D:\OM_data\raw_data\";day_stamp$;
+video_folder_name$ = "D:\OM_data\raw_data\";day_stamp$;"\Videosdata\"
+//powerlab_folder$ =  "D:\OM_data\raw_data\";day_stamp$;"\Powerlab_data\"
+
+// create the directories for video and powerlab data 
+if (exist(exp_folder_name$) == 0) then
+MakeDirectory(video_folder_name$)
+MakeDirectory(exp_folder_name$;"\Powerlab_data\")
+endif
+
+:rem Create File Name
+
+current_time$ = time$()
+current_hour$ = left$(current_time$,2)
+current_minute$ = mid$(current_time$,4,2)
+current_second$ = mid$(current_time$,7,2)
+time_stamp$ = current_hour$;"h-";current_minute$;"m-";current_second$
+
+file_name$ = video_folder_name$;day_stamp$;"_";time_stamp$;"s.sif"
+
+:rem Save File
+
+save(#0, file_name$)
+
+:rem Close File
+
+CloseWindow(#0)
+CloseWindow(#1)
+
+:rem wend
