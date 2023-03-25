@@ -1,0 +1,33 @@
+# name: napari-pp-test
+name: omaas_gpu
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy
+  - pip
+  - pandas
+  - matplotlib
+  - scikit-image
+  - scikit-learn
+  - jupyterlab
+  - nodejs
+  - jupyter_contrib_nbextensions
+  - nb_conda_kernels
+  - ipykernel
+  - pip:
+	- git+https://github.com/rapidsai/cucim.git@v22.04.00#egg=cucim&subdirectory=python/cucim
+      - cookiecutter
+      - magicgui
+      - napari[all]
+      - sif_parser
+      - twine
+      - pytest
+      - microfilm[all]
+      - napari-svg
+      - napari-omaas
+      - napari-mat-file-reader
+      - mat73 # this works
+      - pymatreader
+  - anaconda:
+      - git
