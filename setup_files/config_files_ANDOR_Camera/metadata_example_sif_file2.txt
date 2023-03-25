@@ -1,0 +1,35 @@
+Filename:                     13h-43m-25s.sif
+Date and Time:                Fri Nov 26 12:43:22.000 2021
+Software Version:             4.25.30007.0
+Temperature (C):              0
+Model:                        ZYLA-5.5-CL10
+Data Type:                    Counts
+Acquisition Mode:             Kinetics
+Trigger Mode:                 Internal
+Exposure Time (secs):         0.0047
+Accumulate Cycle Time (secs): 0.0048016
+Number of Accumulations:      1
+Kinetic Cycle Time (secs):    0.0048016
+Frequency (Hz):               208.26
+Number in Kinetics Series:    500
+Readout Mode:                 Full Resolution Image
+Horizontal Binning:           1
+Vertical Binning:             1
+Clockwise rotation:           false
+Anti-Clockwise rotation:      false
+Extended Data Range:          off
+Horizontally flipped:         false
+Vertically flipped:           false
+Pixel Readout Rate:           560.001 MHz
+Serial Number:                7581
+Sensitivity/Dynamic Range:    1.000000
+Spurious Noise Filter:        Off
+Photon counted:               false
+Data Averaging Filter Mode:   No Filter
+Electronic Shuttering Mode:   Global
+Port Readout Mode:            All Ports
+LightSheet Mode:              Up (Simultaneous)
+Alternating Readout Direction:Off
+Exposure Window Height (lines):0
+
+

@@ -1,0 +1,80 @@
+:rem This program will acquire a signal with current settings, save the file to the current directory 
+:rem in a folder with the current date, using the current time as the file name,
+:rem and then close the data set.
+
+:rem start = 1
+
+:rem while start == 1
+
+:rem Acquire Signal 
+SetTriggerMode(0) :rem 0 = internal; 1 = external; 6 = external start; 7 = external exposure
+run()
+
+:rem Create Folder
+
+current_date$ = date$()
+current_year$ = right$(current_date$,4)
+current_month$ = mid$(current_date$,4,2)
+current_day$ = left$(current_date$,2)
+folder_name$ = "D:\OM_data\raw_data\Videosdata/";current_year$;current_month$;;current_day$
+
+if (exist(folder_name$) == 0) then
+MakeDirectory(folder_name$)
+endif
+
+:rem Create File Name
+
+
+
+
+current_time$ = time$()
+current_hour$ = left$(current_time$,2)
+current_minute$ = mid$(current_time$,4,2)
+current_second$ = mid$(current_time$,7,2)
+
+file_name$ = folder_name$;"/";current_hour$;"h-";current_minute$;"m-";current_second$
+
+
+:rem Create subfolder T0
+
+subfolder_t0$ = file_name$;"_benchmrk";"/";"T0_";current_hour$;"h-";current_minute$;"m-";current_second$;"s";
+
+
+
+if (exist(subfolder_t0$) == 0) then
+MakeDirectory(subfolder_t0$)
+endif
+
+
+
+
+:rem Save File
+
+save(#0, file_name$;"s.sif")
+
+
+
+
+
+:rem Create subfolder T1
+
+current_time$ = time$()
+current_hour$ = left$(current_time$,2)
+current_minute$ = mid$(current_time$,4,2)
+current_second$ = mid$(current_time$,7,2)
+
+
+subfolder_t1$ = file_name$;"_benchmrk";"/";"T1_";current_hour$;"h-";current_minute$;"m-";current_second$;"s";
+
+if (exist(subfolder_t1$) == 0) then
+MakeDirectory(subfolder_t1$)
+endif
+
+
+
+:rem Close File
+
+CloseWindow(#0)
+CloseWindow(#1)
+
+:rem wend

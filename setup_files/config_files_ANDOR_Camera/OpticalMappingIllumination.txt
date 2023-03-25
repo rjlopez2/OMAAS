@@ -1,0 +1,6 @@
+OpticalMapping Illumination:
+ - Software needs to be installed per user
+
+Path to the installer:
+\\pc140\share\Elektronik\Software\OpticalMappingIllumination\setup.exe
+
