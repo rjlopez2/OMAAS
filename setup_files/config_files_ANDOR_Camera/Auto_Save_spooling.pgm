@@ -2,37 +2,35 @@
 :rem in a folder with the current date, using the current time as the file name,
 :rem and then close the data set.
 
-:rem 
-start = 1
-
-:rem 
-while start == 1
-
-
-:rem Acquire Signal 
-SetTriggerMode(6) :rem 0 = internal; 1 = external; 6 = external start; 7 = external exposure
-ShowTimings()
-run()
-
-:rem Create Folder
+// create the directories for video and powerlab data 
 
 current_date$ = date$()
 current_year$ = right$(current_date$,4)
 current_month$ = mid$(current_date$,4,2)
 current_day$ = left$(current_date$,2)
+
+// Create Folder name
+
 day_stamp$ = current_year$;current_month$;;current_day$
 
 exp_folder_name$ = "D:\OM_data\raw_data\";day_stamp$;
-video_folder_name$ = "D:\OM_data\raw_data\";day_stamp$;"\Videosdata\"
-//powerlab_folder$ =  "D:\OM_data\raw_data\";day_stamp$;"\Powerlab_data\"
+video_folder_name$ = exp_folder_name$;"\Videosdata\"
 
-// create the directories for video and powerlab data 
 if (exist(exp_folder_name$) == 0) then
 MakeDirectory(video_folder_name$)
-MakeDirectory(exp_folder_name$;"\Powerlab_data\")
+MakeDirectory(exp_folder_name$;"\Powerlab_data\") // cereate Powerlab folder too
 endif
 
-:rem Create File Name
+
+// start the loop
+
+start = 1
+while start == 1
+
+:rem Acquire Signal 
+
+// run()
+// Create File Name
 
 current_time$ = time$()
 current_hour$ = left$(current_time$,2)
@@ -40,17 +38,29 @@ current_minute$ = mid$(current_time$,4,2)
 current_second$ = mid$(current_time$,7,2)
 time_stamp$ = current_hour$;"h-";current_minute$;"m-";current_second$
 
-file_name$ = video_folder_name$;day_stamp$;"_";time_stamp$;"s.sif"
+//file_name$ = video_folder_name$;day_stamp$;"_";time_stamp$;"s.sif"
+
+
+// Set acquisition settings
+
+SetTriggerMode(6) :rem 0 = internal; 1 = external; 6 = external start; 7 = external exposure
+:rem set spooling mode
+setspool(1)
+SetSpoolFileType(1) // <<<----this has to be binary otherwise does not work!
+setspoolstorage(0) // spool to disk
+setspoolcompression(0) // no compression
+setspoolformat(0) //  0 - unsigned 16 bit integer, 1 - unsigned 32 bit integer, 2 - signed 16 bit integer, 3 - signed 32 bit integer, 4 - 32 bit float
+setspoolstem(day_stamp$;"_";time_stamp$)
+setspoollocation(video_folder_name$)
+ShowTimings()
+
 
 :rem Save File
 //save(#0, folder_name$;"/";file_name$;".sif")
 
 
-:rem set spooling mode
-setspool(1)
-//SetSpoolFileType(7) // <<<----this brakes the data exporting for some reasons
-setspoolstem(day_stamp$;"_";time_stamp$)
-setspoollocation(folder_name$)
+
+run()
 
 
 
