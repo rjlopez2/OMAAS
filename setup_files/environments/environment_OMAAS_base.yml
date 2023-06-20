@@ -23,5 +23,6 @@ dependencies:
     # - git+https://github.com/rjlopez2/napari-mat-file-reader.git
     # - git+https://github.com/rjlopez2/napari-sif-reader.git
     - pyqtgraph
+    - opencv-python-headless
 
     # - microfilm
