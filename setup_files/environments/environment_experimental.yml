@@ -1,5 +1,5 @@
 # name: napari-pp-test
-name: omass_env_experimental
+name: omass_env_test
 channels:
   - conda-forge
 dependencies:

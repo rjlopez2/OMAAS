@@ -1,0 +1,21 @@
+# name: napari-pp-test
+name: omaas_base_test
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - scikit-image
+  - scikit-learn
+  - jupyterlab
+  - nodejs
+  - jupyter_contrib_nbextensions
+  - nb_conda_kernels
+  - ipykernel
+  # - m2-base # add this for windows compatibility command shell commands
+  - pip:
+    - napari[all]
+    # - git+https://github.com/rjlopez2/napari-omaas.git # napari-omaas
+    # - git+https://github.com/rjlopez2/napari-time_series_plotter.git@custom_use # # install time series plotter from my forked repo
+    # - git+https://github.com/rjlopez2/napari-mat-file-reader.git
+    # - git+https://github.com/rjlopez2/napari-sif-reader.git
