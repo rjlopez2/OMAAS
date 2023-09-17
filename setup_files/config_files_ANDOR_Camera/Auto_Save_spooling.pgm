@@ -24,8 +24,8 @@ endif
 
 // start the loop
 
-start = 1
-while start == 1
+//start = 1
+//while start == 1
 
 :rem Acquire Signal 
 
@@ -43,7 +43,8 @@ time_stamp$ = current_hour$;"h-";current_minute$;"m-";current_second$
 
 // Set acquisition settings
 
-SetTriggerMode(6) :rem 0 = internal; 1 = external; 6 = external start; 7 = external exposure
+SetTriggerMode(0) :rem 0 = internal; 1 = external; 6 = external start; 7 = external exposure
+run()
 :rem set spooling mode
 setspool(1)
 SetSpoolFileType(1) // <<<----this has to be binary otherwise does not work!
@@ -70,4 +71,4 @@ run()
 CloseWindow(#0)
 
 
-wend
+//wend
