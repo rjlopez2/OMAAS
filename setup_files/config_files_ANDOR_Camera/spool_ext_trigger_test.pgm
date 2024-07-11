@@ -1,0 +1,77 @@
+
+//**************  Program begins here *************************************
+
+cls()
+start = 1
+while start == 1
+cls()
+
+gosub .SetupAcquisition
+
+
+gosub .CreateFileName
+//print(time_stamp$)
+
+gosub .CreateExpDirectories
+
+
+gosub .CreateExpDirectories
+
+setspoolstem(day_stamp$;"_";time_stamp$)
+setspoollocation(video_folder_name$)
+
+run()
+
+wend
+
+
+// ********************* Program ends here ***************************************
+
+
+.CreateFileName
+current_time$ = time$()
+current_hour$ = left$(current_time$,2)
+current_minute$ = mid$(current_time$,4,2)
+current_second$ = mid$(current_time$,7,2)
+time_stamp$ = current_hour$;"h-";current_minute$;"m-";current_second$
+
+//file_name$ = video_folder_name$;day_stamp$;"_";time_stamp$;"s.sif"
+return
+
+
+.CreateExpDirectories
+// create the directories for video and powerlab data 
+// get current time/date
+current_date$ = date$()
+current_year$ = right$(current_date$,4)
+current_month$ = mid$(current_date$,4,2)
+current_day$ = left$(current_date$,2)
+
+// Create Folders with current date time for the experiment 
+day_stamp$ = current_year$;current_month$;;current_day$
+exp_folder_name$ = "D:\OM_data\raw_data\";day_stamp$;
+video_folder_name$ = exp_folder_name$;"\Videosdata\"
+
+if (exist(exp_folder_name$) == 0) then
+MakeDirectory(video_folder_name$)
+MakeDirectory(exp_folder_name$;"\Powerlab_data\") // cereate Powerlab folder too
+endif
+return
+
+
+
+.SetupAcquisition
+// The exposure time is configured for 40 msecs and the STT for 10 msecs - thus
+// the FIRE pulse will last for 30 msecs, see Help on "SetShutterTransferTime()".
+
+//set spooling mode
+  setspool(1)
+  SetSpoolFileType(1) // <<<----this has to be binary otherwise does not work! 1 - Binary data, 5 - FITS file, 6 - Sif file,  7 - Tiff file
+  setspoolstorage(0) // spool to disk
+  setspoolcompression(0) // no compression
+  setspoolformat(0) //  0 - unsigned 16 bit integer, 1 - unsigned 32 bit integer, 2 - signed 16 bit integer, 3 - signed 32 bit integer, 4 - 32 bit float
+  SetTriggerMode(6) // 0 = internal; 1 = external; 6 = external start; 7 = external exposure
+  SetAcquisitionMode(3) // 1 = Single Scan; 2 = Accumulate; 3 = Kinetics.
+  setspool(1)
+  //run()
+return

@@ -1,0 +1,10 @@
+Segment with "napery-set ent-anything"
+
+- use 2d image
+- make points at maxima for each heart view using skimage.feature module:
+	> peaks_of_image = skimage.feature.peak_local_max(img2, num_peaks = 4, min_distance=100) # consider changing the min_distance
+- assign those peaks to the points layer:
+	> viewer.layers["SAM points"].data = peaks_of_image
+- confirm annotations
+- optional (to-be-done): create surrounding box for each mask fro cropping and rearranging
+	

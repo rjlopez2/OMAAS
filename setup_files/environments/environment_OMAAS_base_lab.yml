@@ -1,31 +1,34 @@
 # name: napari-pp-test
-name: omaas_base_optimap_pip
+name: omaas_base_lab
 channels:
   - conda-forge
 dependencies:
-  - python=3.9
- #  - cupy
+  - python=3.11
   - pip
-  - numpy
-  - jupyterlab>=3
-  - nb_conda_kernels
+  - "numpy<2" # cupy requires numpy<2
+  - jupyterlab
   - ipykernel
   - nodejs
   - matplotlib
   - ipympl
   - ipywidgets
   - jupyterlab_widgets
+  # - "napari[all]"
+  - pyqt
+  - seaborn
   # - m2-base # add this for windows compatibility command shell commands
   - pip:
     # - git+https://github.com/rapidsai/cucim.git@v23.04.01#egg=cucim&subdirectory=python/cucim
-    - opticalmapping[all]
-    - napari[all]
-    - git+https://github.com/fujiisoup/sif_parser.git
-    - git+https://github.com/rjlopez2/napari-omaas.git # napari-omaas
+    # - napari[all]
+    # - git+https://github.com/fujiisoup/sif_parser.git
+    - opencv-python-headless
+    - opencv-contrib-python
+    - git+https://github.com/napari/napari.git # this is only to test the head
+    #- napari-omaas @ git+https://github.com/rjlopez2/napari-omaas.git
+    # - git+https://github.com/rjlopez2/sif_parser@multithreading_np_spool_open
+    - "napari-omaas @ git+https://github.com/rjlopez2/napari-omaas.git@cpu_stable"
+    # - "opticalmapping[all]"
     # - git+https://github.com/rjlopez2/napari-time_series_plotter.git@custom_use # # install time series plotter from my forked repo
     # - git+https://github.com/rjlopez2/napari-mat-file-reader.git
     # - git+https://github.com/rjlopez2/napari-sif-reader.git
-    # - pyqtgraph
-    # - opencv-python-headless
-
     # - microfilm

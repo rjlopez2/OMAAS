@@ -14,8 +14,8 @@ run()
 
 current_date$ = date$()
 current_year$ = right$(current_date$,4)
-current_month$ = mid$(current_date$,4,2)
-current_day$ = left$(current_date$,2)
+current_day$ = mid$(current_date$,4,2)
+current_month$ = left$(current_date$,2)
 folder_name$ = "D:\OM_data\raw_data\Videosdata/";current_year$;current_month$;;current_day$
 
 if (exist(folder_name$) == 0) then

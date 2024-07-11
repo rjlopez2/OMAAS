@@ -1,0 +1,20 @@
+File for installation
+1 variant, install everything form github at main branch and use condo/pip updates commands accordingly. NOTE: this approach must be tested!
+NOTE:
+Requirements:
+
+- must install conda/mamba/micromamba*
+- must install git for windows
+
+1) Installation file (command instructions)
+
+- create the omaas-base env with napary clean using .yml file -> conda env create -f https://raw.githubusercontent.com/rjlopez2/OMAAS/master/setup_files/environments/environment_OMAAS_base.yml
+- install napari-sif-reader from GitHub  -> pip install git+https://github.com/rjlopez2/napari-sif-reader.git
+- install napari-mat-reader from GitHub -> pip install git+https://github.com/rjlopez2/napari-mat-file-reader.git
+- install napari-omaas from GitHub -> pip install git+https://github.com/rjlopez2/napari-omaas.git
+
+
+2) update packages via conda/pip commands -> this needs to run via pip and require to reinstall the repo
+
+- call the environment
+- run command to update all packages

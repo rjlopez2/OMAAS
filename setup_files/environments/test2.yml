@@ -1,0 +1,12 @@
+name: test_2
+channels:
+  - conda-forge
+dependencies:
+  # - python<3.12 # use this because of numba error
+  - python=3.11
+  - pip
+  - jupyterlab<4
+  - nb_conda_kernels
+  - ipykernel
+  - pytest
+  - tox

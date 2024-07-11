@@ -1,0 +1,32 @@
+name: test_AutoEncoders_cpu
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+dependencies:
+  - python
+  - pip
+  - pandas
+  - scipy
+  - tqdm
+  # - cuda-toolkit
+  - einops
+  - wandb
+  - transformers
+  - diffusers
+  - accelerate
+  - datasets
+  - matplotlib
+  - jupyterlab
+  - nb_conda_kernels
+  - ipykernel
+  - nodejs
+  - ipympl
+  - ipywidgets
+  - jupyterlab_widgets
+  # - m2-base # add this for windows compatibility shell commands (only for Windows OS)
+  - pip:
+    - soundfile
+    - torch
+    - torchvision
+    - torchaudio

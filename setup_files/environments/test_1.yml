@@ -1,0 +1,33 @@
+# name: napari-pp-test
+name: test_2
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+ #  - cupy
+  - pip
+  - numpy
+  - jupyterlab
+  # - nb_conda_kernels # this package semms deprecated
+  # - nb_conda # not suer if this works or not jet
+  - ipykernel
+  # - nodejs
+  # - matplotlib
+  # - ipympl
+  # - ipywidgets
+  # - jupyterlab_widgets
+  # - jupyter_contrib_nbextensions
+  # - m2-base # add this for windows compatibility command shell commands
+  # - pip:
+  #   # - git+https://github.com/rapidsai/cucim.git@v23.04.01#egg=cucim&subdirectory=python/cucim
+  #   # - opticalmapping[all]
+  #   - napari[all]
+  #   - git+https://github.com/fujiisoup/sif_parser.git
+  #   - git+https://github.com/rjlopez2/napari-omaas.git # napari-omaas
+    # - git+https://github.com/rjlopez2/napari-time_series_plotter.git@custom_use # # install time series plotter from my forked repo
+    # - git+https://github.com/rjlopez2/napari-mat-file-reader.git
+    # - git+https://github.com/rjlopez2/napari-sif-reader.git
+    # - pyqtgraph
+    # - opencv-python-headless
+
+    # - microfilm

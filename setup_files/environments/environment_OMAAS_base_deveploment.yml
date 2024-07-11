@@ -1,27 +1,34 @@
-# name: napari-pp-test
-name: omaas_base_optimap_pip
+###########################
+# to use this environemtn, first run it and then
+# navigate to the directory of napri_omaas and
+# install a local version using
+# pip install . -e
+###########################
+name: omaas_base
 channels:
   - conda-forge
 dependencies:
-  - python=3.9
+  - python=3.10
  #  - cupy
   - pip
   - numpy
-  - jupyterlab>=3
+  - jupyterlab
   - nb_conda_kernels
+  - nb_conda
   - ipykernel
   - nodejs
   - matplotlib
   - ipympl
   - ipywidgets
   - jupyterlab_widgets
+  - jupyter_contrib_nbextensions
   # - m2-base # add this for windows compatibility command shell commands
   - pip:
     # - git+https://github.com/rapidsai/cucim.git@v23.04.01#egg=cucim&subdirectory=python/cucim
-    - opticalmapping[all]
     - napari[all]
     - git+https://github.com/fujiisoup/sif_parser.git
-    - git+https://github.com/rjlopez2/napari-omaas.git # napari-omaas
+    # - git+https://github.com/rjlopez2/napari-omaas.git # napari-omaas
+    # - opticalmapping[all]
     # - git+https://github.com/rjlopez2/napari-time_series_plotter.git@custom_use # # install time series plotter from my forked repo
     # - git+https://github.com/rjlopez2/napari-mat-file-reader.git
     # - git+https://github.com/rjlopez2/napari-sif-reader.git

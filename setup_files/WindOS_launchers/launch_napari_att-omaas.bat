@@ -2,7 +2,8 @@
 setlocal
 
 rem
-set PATH=c:\ProgramData\Miniconda3\condabin;%PATH%
-call conda activate omass_env_base
-napari --with napari-omaas
-call conda deactivate
+rem set PATH=c:\ProgramData\Miniconda3\condabin;%PATH%
+call conda micromamba activate omaas_base
+call napari --with napari-omaas
+pause
+powershell micromamba deactivate

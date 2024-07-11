@@ -1,0 +1,32 @@
+name: test_1
+channels:
+  - conda-forge
+dependencies:
+  # - python<3.12 # use this because of numba error
+  - python=3.10
+  - pip
+  - jupyterlab<4
+  - nb_conda_kernels
+  - ipykernel
+  - pytest
+  - tox
+  # - pandas
+  # - numpy
+  # - scikit-learn
+  # - scikit-image
+  # - matplotlib
+  # - nodejs
+  # - ipympl
+  # - ipywidgets
+  # - jupyterlab_widgets
+  # - m2-base # add this for windows compatibility shell commands (only for Windows OS)
+  # - pip:
+  #   - napari[all]
+  #   - git+https://github.com/fujiisoup/sif_parser.git
+    # - git+https://github.com/rjlopez2/napari-omaas.git@map_analysis
+    # - git+https://github.com/rjlopez2/napari-omaas.git
+
+
+  #   - laspy
+  #   - matplotlib
+  #   - ipympl # for 3d interactive plots

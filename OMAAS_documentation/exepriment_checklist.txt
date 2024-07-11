@@ -1,0 +1,13 @@
+- check with christian illumination box
+- set the OM setup
+	- perfusion -> done
+	- camera -> done
+	- illumination	-> done
+	- e-stimulation -> done
+	- pressure transducer(s) calibration –> done
+	- Flow calibration -> done
+- make and test balloons
+- align mirrors
+- check software
+- start writing documentation
+- electrode

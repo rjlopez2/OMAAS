@@ -1,0 +1,20 @@
+// This Andor BASIC program converts a directory of spooled .sifx files from the
+// Andor Zyla sCMOS to regular Andor .sif files.
+// Change subject, loadDirec, saveDirec, and number of files, if necessary.
+// Rafael Jaimes III, PhD
+// rafjaimes@gmail.com
+// v1. 2018-07-09
+
+subject$="FolderName"
+loadDirec$="C:\LoadFolderLocation"
+saveDirec$="C:\SaveFolderLocation"
+nFiles=10
+
+for p = 1 to nFiles step 1
+	loadPath$=loadDirec$;subject$;"\spool_";p;"\Spooled files.sifx"
+	load(#1,loadPath$)
+	savePath$=saveDirec$;subject$;"-";p;".sif"
+	save(#1, savePath$)
+	CloseWindow(#1)
+next
+end

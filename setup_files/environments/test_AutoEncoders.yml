@@ -1,0 +1,36 @@
+name: test_AutoEncoders
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia 
+dependencies:
+  - python
+  - pip
+  - pandas
+  - scipy
+  - tqdm
+  - cuda-toolkit
+  - einops
+  - wandb
+  - transformers
+  - diffusers
+  - accelerate
+  - datasets
+  # - numpy
+  # - scikit-learn
+  # - scikit-image
+  - matplotlib
+  - jupyterlab
+  - nb_conda_kernels
+  - ipykernel
+  - nodejs
+  - ipympl
+  - ipywidgets
+  - jupyterlab_widgets
+  # - m2-base # add this for windows compatibility shell commands (only for Windows OS)
+  - pip:
+    - --index-url https://download.pytorch.org/whl/cu121
+    - torch==2.1.0+cu121
+    - torchaudio
+    - torchvision    
+

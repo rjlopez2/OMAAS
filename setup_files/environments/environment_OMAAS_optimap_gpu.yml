@@ -1,0 +1,22 @@
+# name: napari-pp-test
+name: optimap_gpu
+channels:
+  - conda-forge
+  - nvidia
+dependencies:
+  - pip
+  - python=3.11
+  - cuda-python
+  - ipykernel
+  - nodejs
+  - jupyterlab
+  - ipympl
+  - ipywidgets
+  - jupyterlab_widgets
+  - jupyter_contrib_nbextensions
+  - napari
+  - pyqt
+  - pip:
+    - git+https://github.com/fujiisoup/sif_parser.git
+    - git+https://github.com/rjlopez2/napari-omaas.git
+    - opticalmapping[all]
