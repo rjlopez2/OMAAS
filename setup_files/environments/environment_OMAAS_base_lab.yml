@@ -1,5 +1,5 @@
 # name: napari-pp-test
-name: omaas_base_lab
+name: omaas_base
 channels:
   - conda-forge
 dependencies:
