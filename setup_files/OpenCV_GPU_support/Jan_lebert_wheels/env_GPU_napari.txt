@@ -1,0 +1,17 @@
+conda create -n cucim conda-forge python=3.9
+conda activate cucim
+python -m pip install -U setuptools pip
+# conda install -c conda-forge cudatoolkit-dev
+conda install -c conda-forge cupy -y
+# pip install -e "git+https://github.com/rapidsai/cucim.git@v21.08.01#egg=cucim&subdirectory=python/cucim" scipy scikit-image
+# pip install -e "git+https://github.com/rapidsai/cucim.git@v22.04.00#egg=cucim&subdirectory=python/cucim" scipy scikit-image # -> this branch works
+pip install -e "git+https://github.com/rapidsai/cucim.git@v23.04.01#egg=cucim&subdirectory=python/cucim" # -> this is th latest branch
+# pip install cupy-cuda12x -> don't run this
+conda install -c conda-forge jupyterlab jupyter_contrib_nbextensions nb_conda_kernels matplotlib m2-base -y
+# conda install matplotlib
+python -m pip install "napari[all]"
+
+
+
+# pip uninstall cupy-cuda12x
+# install locally cloned napari plugins
