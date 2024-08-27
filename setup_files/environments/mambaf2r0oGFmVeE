@@ -1,4 +1,0 @@
-opencv-python-headless
-opencv-contrib-python
-git+https://github.com/napari/napari.git
-napari-omaas @ git+https://github.com/rjlopez2/napari-omaas.git@cpu_stable

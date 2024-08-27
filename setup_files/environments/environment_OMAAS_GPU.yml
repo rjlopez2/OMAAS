@@ -1,0 +1,25 @@
+# name: napari-pp-test
+name: omaas_base
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - "numpy<2" # cupy requires numpy<2
+  - jupyterlab
+  - ipykernel
+  - nodejs
+  - matplotlib
+  - ipympl
+  - ipywidgets
+  - jupyterlab_widgets
+  # - "napari[all]"
+  - pyqt
+  - seaborn
+  # - m2-base # add this for windows compatibility command shell commands
+  - pip:
+    - opencv-python-headless
+    - opencv-contrib-python
+    - git+https://github.com/napari/napari.git # this is only to test the head
+    - "napari-omaas[gpu] @ git+https://github.com/rjlopez2/napari-omaas.git"
+    # - "napari-omaas[gpu] @ git+https://github.com/rjlopez2/napari-omaas.git@motion_correction_optimap"
